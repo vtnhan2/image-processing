@@ -108,7 +108,7 @@ python open_image.py
 
 ### Mục đích
 
-Module `image_utils` cung cấp các utility functions để đọc thông tin cấu hình ảnh, giúp các chương trình C tự động detect kích thước ảnh.
+Module `image_utils` cung cấp các utility functions để đọc thông tin cấu hình ảnh, giúp các chương trình C tự động xác định kích thước ảnh.
 
 ### Cấu trúc
 
@@ -120,7 +120,7 @@ Module `image_utils` cung cấp các utility functions để đọc thông tin c
 - **`read_image_dimensions(int *width, int *height)`**:
   - Đọc kích thước ảnh từ file `image_config.txt`
   - Trả về 0 nếu thành công, 1 nếu lỗi
-  - Tự động in thông báo kích thước đã detect
+  - Tự động in thông báo kích thước đã xác định
 
 ### Sử dụng
 
