@@ -3,7 +3,7 @@
 ## Tổng quan
 Dự án thực hiện chuyển đổi ảnh màu sang các định dạng khác nhau: RGB → Grayscale → Binary, sử dụng Python và C.
 
-## Quy trình xử lý
+## Các bước thao tác
 
 ### 1. Chuyển đổi ảnh màu sang Raw format
 ```bash
