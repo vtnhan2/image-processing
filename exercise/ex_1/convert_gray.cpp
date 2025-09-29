@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "image_utils.h"
 
 void convert_gray(const char *raw_file, const char *gray_file, int width, int height)
 {
@@ -38,9 +39,16 @@ void convert_gray(const char *raw_file, const char *gray_file, int width, int he
 
 int main()
 {
-    int width = 256; // set theo ảnh của bạn
-    int height = 256;
-
+    int width, height;
+    
+    printf("Converting RGB to Grayscale...\n");
+    
+    // Auto-detect image dimensions
+    if (!read_image_dimensions(&width, &height)) {
+        printf("Failed to read image dimensions. Exiting.\n");
+        return 1;
+    }
+    
     convert_gray("raw.dat", "gray.dat", width, height);
 
     return 0;

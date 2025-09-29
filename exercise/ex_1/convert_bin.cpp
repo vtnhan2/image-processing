@@ -5,11 +5,14 @@ int main()
 {
     FILE *fgray, *fbin;
     unsigned char pixel;
+    int pixel_count = 0;
 
+    printf("Converting Grayscale to Binary...\n");
+    
     fgray = fopen("gray.dat", "rb");
     if (!fgray)
     {
-        printf("cannot open file gray.dat\n");
+        printf("Cannot open file gray.dat\n");
         return 1;
     }
 
@@ -31,11 +34,13 @@ int main()
             bin_pixel = 255; // white
 
         fwrite(&bin_pixel, 1, 1, fbin);
+        pixel_count++;
     }
 
     fclose(fgray);
     fclose(fbin);
 
-    printf("Chuyển đổi hoàn tất -> bin.dat\n");
+    printf("Conversion completed -> bin.dat\n");
+    printf("Processed %d pixels\n", pixel_count);
     return 0;
 }
