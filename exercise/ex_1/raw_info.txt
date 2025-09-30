@@ -1,0 +1,7 @@
+Original file: input.jpg
+Width: 2912
+Height: 2186
+Channels: 3
+Data type: uint8
+File size: 19096896 bytes
+Pixel order: RGB (row-major)
